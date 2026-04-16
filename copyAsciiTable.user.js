@@ -3,6 +3,7 @@
 // @namespace    de.rus1rius
 // @version      1.1.0
 // @updateURL    https://github.com/janDigeser/UserScripts/raw/refs/heads/main/copyAsciiTable.user.js
+// @license      MIT
 // @description  Hold ALT to show copy buttons on all tables and copy them as ASCII
 // @match        *://*/*
 // @grant        GM_setClipboard
