@@ -3,7 +3,7 @@
 // @namespace    de.rus1rius
 // @updateURL    https://github.com/janDigeser/UserScripts/raw/refs/heads/main/kenjoGleitzeit.user.js
 // @license      MIT
-// @version      1.0
+// @version      1.4
 // @match        https://app.kenjo.io/cloud/attendance/my-attendance
 // ==/UserScript==
 (function () {
