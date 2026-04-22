@@ -3,7 +3,7 @@
 // @namespace    de.rus1rius
 // @updateURL    https://github.com/janDigeser/UserScripts/raw/refs/heads/main/kenjoGleitzeit.user.js
 // @license      MIT
-// @version      1.5
+// @version      1.6
 // @match        https://app.kenjo.io/*
 // ==/UserScript==
 (function () {
@@ -30,7 +30,7 @@
         return `${sign}${h}:${String(m).padStart(2, '0')}`;
     }
     function isMonatlichActive() {
-        const activeTab = document.querySelector('orgos-people-detail-attendance .mat-tab-label.mat-tab-label-active .mat-tab-label-content');
+        const activeTab = document.querySelector('orgos-people-detail-attendance .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label');
         return activeTab?.textContent?.trim().startsWith('MONATLICH') ?? false;
     }
     function run() {
