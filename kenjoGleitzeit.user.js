@@ -3,7 +3,7 @@
 // @namespace    de.rus1rius
 // @updateURL    https://github.com/janDigeser/UserScripts/raw/refs/heads/main/kenjoGleitzeit.user.js
 // @license      MIT
-// @version      1.6
+// @version      1.7
 // @match        https://app.kenjo.io/*
 // ==/UserScript==
 (function () {
@@ -47,6 +47,7 @@
             if (!workedEl || !expectedEl) return;
             const workedMin = parseMinutes(workedEl.childNodes[0]?.textContent ?? '');
             const expectedMin = parseMinutes(expectedEl.textContent ?? '');
+            if (expectedMin > 0 && workedMin === 0) return;
             cumulativeMinutes += workedMin - expectedMin;
             const cls = cumulativeMinutes >= 0 ? 'us-gleitzeit-positiv' : 'us-gleitzeit-negativ';
             const div = document.createElement('div');
