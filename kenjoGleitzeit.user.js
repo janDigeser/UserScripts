@@ -3,7 +3,7 @@
 // @namespace    de.rus1rius
 // @updateURL    https://github.com/janDigeser/UserScripts/raw/refs/heads/main/kenjoGleitzeit.user.js
 // @license      MIT
-// @version      1.7
+// @version      1.8
 // @match        https://app.kenjo.io/*
 // ==/UserScript==
 (function () {
@@ -42,8 +42,8 @@
         document.querySelectorAll('.us-gleitzeit-positiv, .us-gleitzeit-negativ').forEach(el => el.remove());
         let cumulativeMinutes = 0;
         dayContainers.forEach(container => {
-            const workedEl = container.querySelector('div.pdap-working-time');
-            const expectedEl = container.querySelector('orgos-column.pdap-day-cell div:nth-child(2)');
+            const workedEl = container.querySelector('div.kda-working-time');
+            const expectedEl = container.querySelector('span.kdh-scheduled-heading');
             if (!workedEl || !expectedEl) return;
             const workedMin = parseMinutes(workedEl.childNodes[0]?.textContent ?? '');
             const expectedMin = parseMinutes(expectedEl.textContent ?? '');
